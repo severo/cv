@@ -25,10 +25,10 @@ function cv_upgrade($nom_meta_base_version, $version_cible){
  *
  * @param string $nom_meta_base_version
  */
-function gis_vider_tables($nom_meta_base_version) {
+function cv_vider_tables($nom_meta_base_version) {
 	effacer_meta($nom_meta_base_version);
 	// Effacer la config
-	effacer_meta('gis');
+	effacer_meta('cv');
 }
 
 ?>
