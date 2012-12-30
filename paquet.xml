@@ -1,0 +1,26 @@
+<paquet
+	prefix="cv"
+	categorie="divers"
+	version="0.1.0"
+	schema="0.1.0"
+	etat="test"
+	compatibilite="[3.0.0;3.0.*]"
+	logo="images/cv-32.png"
+	documentation="http://www.rednegra.net/cv/"
+>
+
+	<nom>CV</nom>
+
+	<auteur lien="http://www.rednegra.net/cv/">severo</auteur>
+	<copyright>2012-2013</copyright>
+	<licence>GPL v3</licence>
+	<credit lien="http://www.fatcow.com/">Icône de FatCow Web Hosting sous licence CC BY</credit>
+
+	<traduire module="cv" reference="es" />
+	<traduire module="paquet-cv" reference="es" />
+
+	<necessite nom="agenda" compatibilite="[3.11.2;]" />
+	<necessite nom="gis" compatibilite="[4.1.14;]" />
+
+	<!--menu nom="configurer_cv" titre="cv:cfg_titre_cv" parent="menu_configuration" icone="images/cv-16.png" /-->
+</paquet>
