@@ -37,10 +37,10 @@
 							<article>
 								<div class="date-ranges">
 									<BOUCLE_date_debut(EVENEMENTS){id_article}{par date_debut}{0,1}>
-										[<time class="job-start" [datetime="(#DATE|date_iso)"]>(#DATE_DEBUT|affdate_court)</time>]
+										[<time class="job-start" [datetime="(#DATE_DEBUT|date_iso)"]>[(#DATE_DEBUT|nom_mois{'abbr'})] (#DATE_DEBUT|annee)</time>]
 									</BOUCLE_date_debut>
 									<BOUCLE_date_fin(EVENEMENTS){id_article}{!par date_fin}{0,1}>
-										[<time class="job-end" [datetime="(#DATE|date_iso)"]>(#DATE_FIN|affdate_court)</time>]
+										[<time class="job-end" [datetime="(#DATE_FIN|date_iso)"]>[(#DATE_FIN|nom_mois{'abbr'})] (#DATE_FIN|annee)</time>]
 									</BOUCLE_date_fin>
 								</div>
 								<hgroup>
