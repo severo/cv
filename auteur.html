@@ -1,0 +1,82 @@
+<BOUCLE_principale(AUTEURS) {id_auteur}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+<head>
+<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+<title>[(#NOM|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+<INCLURE{fond=inclure/head} />
+<meta name="robots" content="none" />
+<link rel="alternate" type="application/rss+xml" title="[(#NOM|textebrut)]" href="[(#URL_PAGE{backend}|parametre_url{id_auteur,#ID_AUTEUR})]" />
+</head>
+
+<body class="pas_surlignable page_auteur">
+<div class="page">
+
+	<!--INCLURE{fond=inclure/header_auteur, id_auteur=#ID_AUTEUR} /-->
+	<!--INCLURE{fond=inclure/nav_auteur,env} /-->
+
+	<div class="main">
+		[(#REM) Contenu principal : affichage de l'auteur ]
+		<div class="wrapper">
+		<div class="content" id="content">
+			<p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:info_auteurs:>[ &gt; <strong class="on">(#NOM|couper{80})</strong>]</p>
+	
+			[(#REM) Rubriques de l'auteur ]
+			<B_rubriques>
+			<div class="rubrique_cv">
+				<BOUCLE_rubriques(RUBRIQUES) {par num titre}>
+					<B_articles>
+						#ANCRE_PAGINATION
+						<h1>#TITRE</h1>
+						<BOUCLE_articles(ARTICLES) {id_rubrique} {id_auteur} {!par num titre} {pagination 10}>
+							<article>
+								<div class="date-ranges">
+									<BOUCLE_date_debut(EVENEMENTS){id_article}{par date_debut}{0,1}>
+										[<time class="job-start" [datetime="(#DATE|date_iso)"]>(#DATE_DEBUT|affdate_court)</time>]
+									</BOUCLE_date_debut>
+									<BOUCLE_date_fin(EVENEMENTS){id_article}{!par date_fin}{0,1}>
+										[<time class="job-end" [datetime="(#DATE|date_iso)"]>(#DATE_FIN|affdate_court)</time>]
+									</BOUCLE_date_fin>
+								</div>
+								<hgroup>
+									<BOUCLE_empleador(MOTS) {id_article} {id_groupe = 2} {gis} {0,1}>
+										<h1 class="job-location">
+											#TITRE - #VILLE, #PAYS
+										</h1>
+									</BOUCLE_empleador>
+									<h2 class="job-title"><a href="#URL_ARTICLE">#TITRE</a></h2>										
+								</hgroup>
+								<p class="job-details">
+									[(#CHAPO|?{#CHAPO,#INTRODUCTION})]
+								</p>
+							</article>
+						</BOUCLE_articles>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</B_articles>
+				</BOUCLE_rubriques>
+			</B_rubriques>
+
+			#FORMULAIRE_ECRIRE_AUTEUR
+	
+		</div><!--.content-->
+		</div><!--.wrapper-->
+	
+		<div class="aside">
+	
+			<INCLURE{fond=inclure/navsub} />
+			#FORMULAIRE_RECHERCHE
+			
+		</div><!--.aside-->
+	</div><!--.main-->
+
+	<INCLURE{fond=inclure/footer,self=#SELF} />
+
+</div><!--.page-->
+</body>
+</html>
+</BOUCLE_principale>[(#INCLURE{fond=404, erreur=<:aucun_auteur:>})]<//B_principale>
