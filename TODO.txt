@@ -1,0 +1,34 @@
+* permitir varios empleadores por contrato ?
+* varios puntos GIT por empleador ?
+* esqueleto para los grupos de palabras-clave
+* personas de referencia (a utilizar como autores de un artículo ?)
+* especificar, para las competencias, la importancia, y el nivel de manejo
+* representar las palabras-clave con una tabla / una "heatmap"
+* HTML5 / CSS3
+* css/ (tema)
+* poner en la zona ? salvatore ?
+* una imagen por trabajo ? (logo)
+* traducción del contenido
+* fresco cronologico
+* uso de microdata (fechas, lugares)
+
+A poner en la configuración del plugin:
+* id_groupe de los empleadores
+* lista ordenada de id_groupe de las competencias
+* lista de las secciones de artículos
+
+Esqueletos a crear:
+* sommaire
+* OK - article
+* OK - auteur
+* mot
+* gis
+* rubrique
+
+A añadir en el contenido:
+* participación en comunidades de SL
+* formación
+* otros
+* más detalles sobre el autor ?
+* separar 1 experiencia y varios contratos ?
+* añadir respaldo del CV como documentos
