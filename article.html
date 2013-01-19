@@ -37,14 +37,15 @@
 			[<div class="#EDIT{chapo} chapo surlignable">(#CHAPO|image_reduire{500,*})</div>]
 
 			<BOUCLE_empleador(MOTS) {id_article} {id_groupe = 2} {gis} {0,1}>
-				<div class="employeur">
-					<a href="#URL_MOT">#TITRE - #VILLE, #PAYS</a>
-					[(#INCLURE{fond=modeles/carte_gis, objets=mots, id_mot=#ID_MOT, autocenterandzoom=oui, height=200px, width=50%, scale=oui, fullscreen=oui})]
-				</div>
+			<div class="employeur">
+				<a href="#URL_MOT">#TITRE - #VILLE, #PAYS</a>
+				[(#INCLURE{fond=modeles/carte_gis, objets=mots, id_mot=#ID_MOT, autocenterandzoom=oui, height=200px, width=50%, scale=oui, fullscreen=oui})]
+			</div>
 			</BOUCLE_empleador>
 
+
+			<B_groupes_mots_competences>
 			<div class="competences">
-				<B_groupes_mots_competences>
 				<ul>
 				<BOUCLE_groupes_mots_competences(GROUPES_MOTS) {id_groupe IN 4,1,6,8,3,5,7,9}>
 					<B_mots_competences>
@@ -58,8 +59,8 @@
 					</B_mots_competences>
 				</BOUCLE_groupes_mots_competences>
 				</ul>
-				</B_groupes_mots_competences>
 			</div>
+			</B_groupes_mots_competences>
 
 			[<div class="#EDIT{texte} texte surlignable">(#TEXTE|image_reduire{500,*})</div>]
 		
@@ -100,8 +101,7 @@
 				</ul>
 			</div>
 			</B_article_rubrique_suivant>
-	
-	
+
 			[(#REM) Menu de navigation mots-cles ]
 			#MODELE{article_mots}
 			
