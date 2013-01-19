@@ -8,6 +8,12 @@
 /* Habillage des elements du contenu
 /* ------------------------------------------ */
 
+a.seccion{display: block;margin-bottom: 1em;padding: 0.5em;padding-left: 1em;background-color: #ff8d40; font-size: 1.5em;}
+a.seccion {color: #262626;}
+a.seccion:focus,
+a.seccion:hover,
+a.seccion:active { background-color: #262626; color: #ff4d00 }
+
 .arbo { clear: both; font-size: .9em; color: #474539; }
 .arbo * { font-weight: normal; }
 

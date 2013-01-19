@@ -21,6 +21,12 @@
 	<!--INCLURE{fond=inclure/nav,env} /-->
 	
 	<div class="main">
+		<BOUCLE_parent(RUBRIQUES){id_rubrique=#ID_RUBRIQUE}>
+		<a href="#URL_RUBRIQUE" class="seccion">
+			#TITRE
+		</a>
+		</BOUCLE_parent>
+
 		[(#REM) Contenu principal : contenu de l'article ]
 		<div class="wrapper hfeed">
 		<div class="content hentry" id="content">
