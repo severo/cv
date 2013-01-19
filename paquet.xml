@@ -15,6 +15,8 @@
 	<copyright>2012-2013</copyright>
 	<licence>GPL v3</licence>
 	<credit lien="http://www.fatcow.com/">Icône de FatCow Web Hosting sous licence CC BY</credit>
+	<credit lien="http://subtlepatterns.com/exclusive-paper/">Atle Mo - textura "Exclusive Paper"</credit>
+	<credit lien="http://www.fontsquirrel.com/fonts/noticia-text">JM Solé - Fuente "Noticia Text"</credit>
 
 	<traduire module="cv" reference="es" />
 	<traduire module="paquet-cv" reference="es" />
