@@ -17,6 +17,7 @@
 	<credit lien="http://www.fatcow.com/">Icône de FatCow Web Hosting sous licence CC BY</credit>
 	<credit lien="http://subtlepatterns.com/exclusive-paper/">Atle Mo - textura "Exclusive Paper"</credit>
 	<credit lien="http://www.fontsquirrel.com/fonts/noticia-text">JM Solé - Fuente "Noticia Text"</credit>
+	<credit lien="http://romy.tetue.net/arrondir-les-angles-en-css3?lang=fr">Romy - border-radius</credit>
 
 	<traduire module="cv" reference="es" />
 	<traduire module="paquet-cv" reference="es" />
