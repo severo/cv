@@ -165,6 +165,10 @@ ul.tags li a:focus,
 ul.tags li a:hover,
 ul.tags li a:active { background-color: #FF8D40; color: #262626 }
 
+/* Employeur */
+.employeur {float: right; width: 300px; margin: 0.5em;border: solid 1px #262626;}
+.employeur > a {display: block; float: left; padding: 0.5em;}
+
 /* Hyperliens
 ---------------------------------------------- */
 a { color: #ff4d00; text-decoration: none; }
