@@ -44,7 +44,7 @@
 			<BOUCLE_empleador(MOTS) {id_article} {id_groupe = 2} {gis} {0,1}>
 			<div class="employeur">
 				<a class="inverso" href="#URL_MOT">#TITRE - #VILLE, #PAYS</a>
-				[(#INCLURE{fond=modeles/carte_gis, objets=mots, id_mot=#ID_MOT, autocenterandzoom=oui, height=200px, width=100%, scale=oui, fullscreen=oui})]
+				[(#INCLURE{fond=modeles/carte_gis, objets=mots, id_mot=#ID_MOT, lat=#LAT, lon=#LON, zoom=5, autocenterandzoom='',height=200px, width=100%, scale=oui, fullscreen=oui})]
 			</div>
 			</BOUCLE_empleador>
 
