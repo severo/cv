@@ -13,7 +13,7 @@ a.seccion{display: block;margin-bottom: 1em;padding: 0.5em;padding-left: 1em;fon
 a.inverso {color: #262626;background-color: #ffad60;}
 a.inverso:focus,
 a.inverso:hover,
-a.inverso:active { background-color: #c9c6bf; color: #cf2d00 }
+a.inverso:active { background-color: #c9c6bf; color: #262626; }
 
 .arbo { clear: both; font-size: .9em; color: #474539; }
 .arbo * { font-weight: normal; }
