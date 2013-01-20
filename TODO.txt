@@ -12,6 +12,7 @@
 * fresco cronologico
 * uso de microdata (fechas, lugares)
 * mapas: primero imagen estatica, luego mapa interactivo
+* imprimir: PDF (versión corta, mediana, completa)
 
 A poner en la configuración del plugin:
 * id_groupe de los empleadores
