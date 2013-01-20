@@ -26,6 +26,7 @@ Esqueletos a crear:
 * gis
 * rubrique
 * 404
+* recherche (detallar por experiencias, formación, etc.)
 
 A añadir en el contenido:
 * participación en comunidades de SL
