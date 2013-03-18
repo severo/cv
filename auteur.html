@@ -32,7 +32,7 @@
 					<B_articles>
 						#ANCRE_PAGINATION
 						<h1>#TITRE</h1>
-						<BOUCLE_articles(ARTICLES) {id_rubrique} {id_auteur} {!par num titre} {pagination 10}>
+						<BOUCLE_articles(ARTICLES) {id_rubrique} {id_auteur} {lang} {!par num titre} {pagination 10}>
 							<article>
 								<div class="date-ranges">
 									<BOUCLE_date_debut(EVENEMENTS){id_article}{par date_debut}{0,1}>
