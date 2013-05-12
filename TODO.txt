@@ -1,5 +1,5 @@
 * permitir varios empleadores por contrato ?
-* varios puntos GIT por empleador ?
+* varios puntos GIS por empleador ?
 * esqueleto para los grupos de palabras-clave
 * personas de referencia (a utilizar como autores de un artículo ?)
 * especificar, para las competencias, la importancia, y el nivel de manejo
