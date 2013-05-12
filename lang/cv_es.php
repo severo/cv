@@ -11,6 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'cfg_lbl_test' => 'Test',
 	// E
 	'empleo_anterior' => 'Empleo anterior',
+	'empleo_siguiente' => 'Empleo siguiente',
 );
 
 ?>
