@@ -5,7 +5,9 @@
 				<BOUCLE_rubriques(RUBRIQUES) {par num titre}>
 					<B_articles>
 						#ANCRE_PAGINATION
-						<h1>#TITRE</h1>
+						<a href="#URL_RUBRIQUE" class="seccion inverso">
+							#TITRE
+						</a>
 						<BOUCLE_articles(ARTICLES) {id_rubrique} {id_auteur} {lang} {!par num titre} {pagination 10}>
 							<article>
 								<div class="date-ranges">
