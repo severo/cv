@@ -1,7 +1,7 @@
 <paquet
 	prefix="cv"
 	categorie="divers"
-	version="0.1.1"
+	version="0.1.2"
 	schema="0.1.0"
 	etat="test"
 	compatibilite="[3.0.0;3.1.*]"
@@ -24,6 +24,7 @@
 
 	<necessite nom="agenda" compatibilite="[3.11.2;]" />
 	<necessite nom="gis" compatibilite="[4.1.14;]" />
+	<necessite nom="recuperer_favicon" compatibilite="[1.0.0;]" />
 	<necessite nom="Z" compatibilite="[1.7;]" />
 
 	<!--menu nom="configurer_cv" titre="cv:cfg_titre_cv" parent="menu_configuration" icone="images/cv-16.png" /-->
