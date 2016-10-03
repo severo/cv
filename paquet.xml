@@ -1,10 +1,10 @@
 <paquet
 	prefix="cv"
 	categorie="divers"
-	version="0.1.0"
+	version="0.1.1"
 	schema="0.1.0"
 	etat="test"
-	compatibilite="[3.0.0;3.0.*]"
+	compatibilite="[3.0.0;3.1.*]"
 	logo="images/cv-32.png"
 	documentation="http://www.rednegra.net/cv/"
 >
