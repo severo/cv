@@ -8,10 +8,11 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
-	'cfg_lbl_test' => 'Test',
+	'cfg_lbl_test' => 'Test'
 	// E
 	'empleo_anterior' => 'Empleo anterior',
 	'empleo_siguiente' => 'Empleo siguiente',
+	'en_curso' => 'en curso',
 );
 
 ?>

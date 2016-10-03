@@ -12,6 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'empleo_anterior' => 'Emploi précédent',
 	'empleo_siguiente' => 'Emploi suivant',
+        'en_curso' => 'en cours',
 );
 
 ?>

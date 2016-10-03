@@ -1,0 +1,16 @@
+<BOUCLE_article(ARTICLES){id_article}>
+#SET{date_inicio, nada}
+<BOUCLE_date_inicio(EVENEMENTS){id_article}{!par date_debut}{0,1}>
+        #SET{date_inicio, #DATE_DEBUT}
+</BOUCLE_date_inicio>
+        [(#REM) S'il n'y a pas d'évênements, on cherche dans les traductions - TODO : ne gere pas les doublons, a corriger]
+        <BOUCLE_traductions_inicio(ARTICLES){traduction}{exclus}>
+                <BOUCLE_date_inicio_trad(EVENEMENTS){id_article}{!par date_debut}{0,1}>
+                        #SET{date_inicio, #DATE_DEBUT}
+                </BOUCLE_date_inicio_trad>
+        </BOUCLE_traductions_inicio>
+<//B_date_inicio>
+[(#GET{date_inicio}|=={nada}|non)
+        [<time class="job-start" [datetime="(#GET{date_inicio}|date_iso)"]>[(#GET{date_inicio}|mois)/](#GET{date_inicio}|annee)</time>]
+]
+</BOUCLE_article>

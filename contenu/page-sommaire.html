@@ -3,9 +3,32 @@
 			<B_rubriques>
 			<div class="rubrique_cv">
 				<BOUCLE_rubriques(RUBRIQUES) {par num titre}>
-					<a href="#URL_RUBRIQUE" class="seccion inverso">
-						#TITRE
-					</a>
+					<B_articles>
+						#ANCRE_PAGINATION
+						<a href="#URL_RUBRIQUE" class="seccion inverso">
+							#TITRE
+						</a>
+						<BOUCLE_articles(ARTICLES) {id_rubrique} {id_auteur} {lang} {!par num titre} {pagination 10} {0,1}>
+							<article>
+								<div class="date-ranges">
+                                                                        #MODELE{fecha_inicio, id_article}
+                                                                        #MODELE{fecha_fin, id_article}
+								</div>
+								<hgroup>
+									<BOUCLE_empleador(MOTS) {id_article} {id_groupe IN 2,10} {gis} {0,1}>
+										<h1 class="job-location">
+											#TITRE - #VILLE, #PAYS
+										</h1>
+									</BOUCLE_empleador>
+									<h2 class="job-title"><a href="#URL_ARTICLE">#TITRE</a></h2>										
+								</hgroup>
+								<div class="job-details">
+									[(#CHAPO|?{#CHAPO,#INTRODUCTION})]
+								</div>
+							</article>
+						</BOUCLE_articles>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</B_articles>
 				</BOUCLE_rubriques>
 			</div>
 			</B_rubriques>
