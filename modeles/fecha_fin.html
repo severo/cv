@@ -5,7 +5,7 @@
 </BOUCLE_date_fin>
         [(#REM) S'il n'y a pas d'évênements, on cherche dans les traductions - TODO : ne gere pas les doublons, a corriger]
         <BOUCLE_traductions_fin(ARTICLES){traduction}{exclus}>
-                <BOUCLE_date_fin_trad(EVENEMENTS){id_article}{!par date_fin}{0,1}>
+                <BOUCLE_date_fin_trad(EVENEMENTS){id_article}{age_fin >= 0}{!par date_fin}{0,1}>
                         #SET{date_fin, #DATE_FIN}
                 </BOUCLE_date_fin_trad>
         </BOUCLE_traductions_fin>
